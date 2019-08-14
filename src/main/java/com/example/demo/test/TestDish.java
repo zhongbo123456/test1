@@ -179,7 +179,7 @@ public class TestDish {
         /**
          * reduce需要将流中所有元素反复结合起来，得到一个值
         */
-      /*  List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
         Integer reduce = list.stream().reduce(0, (a, b) -> a + b);
         System.out.println("reduce = " + reduce);
 
@@ -187,8 +187,13 @@ public class TestDish {
         System.out.println("reduce2 = " + reduce2);
 
         Integer reduce1 = list.stream().reduce(1, (a, b) -> a * b);
-        System.out.println("reduce1 = " + reduce1);*/
-
+        System.out.println("reduce1 = " + reduce1);
+        Optional<Integer> reduce3 = list.stream().reduce(Integer::max);
+        System.out.println("reduce3 = " + reduce3);
+        Optional<Integer> reduce4 = list.stream().reduce(Integer::min);
+        System.out.println("reduce4 = " + reduce4);
+        long count = list.stream().count();
+        System.out.println("count = " + count);
 
 
     }
