@@ -1,5 +1,4 @@
 package com.example.demo.test;
-
 public class Trader {
     private final String name;
     private final String city;

@@ -1,9 +1,6 @@
 package com.example.demo.test;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toSet;
@@ -67,7 +64,11 @@ public class TestTrade {
                 .map(Transaction::getValue)
                 .forEach(System.out::println);
          //所有交易中，最高的交易额是多少
-
+        Optional<Integer> reduce1 = transactions.stream().map(Transaction::getValue).reduce(Integer::max);
+        System.out.println("reduce1 = " + reduce1);
+        //找到交易额最小的交易
+        Optional<Transaction> min = transactions.stream().min(Comparator.comparing(Transaction::getValue));
+        System.out.println("min = " + min);
 
 
     }

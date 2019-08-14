@@ -3,6 +3,13 @@ package com.example.demo.test;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * @ClassName: com.example.demo.test.test.java
+ * @Description: 优惠券拼接
+ * @author: zhongbo
+ * @date:  2019-08-14 9:27
+ * @version V1.0
+ */
 
 public class test {
     public static void main(String[] args) {
