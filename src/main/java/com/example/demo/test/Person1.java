@@ -6,7 +6,7 @@ package com.example.demo.test;
  * @date:  2019-07-31 13:46
  * @version V1.0
  */
-public class Person1 {
+public class Person1 extends Man{
     /**
      * 名字
      */
