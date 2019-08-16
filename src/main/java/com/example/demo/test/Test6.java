@@ -2,7 +2,10 @@ package com.example.demo.test;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 /**
  * @Title: instanceof
  * @ClassName: com.example.demo.test.Test6.java
@@ -29,6 +32,28 @@ public class Test6 {
         if(p  instanceof Man){
             System.out.println("2222");
         }
+        Man m=new Person1();
+        if(m instanceof Man){
+            System.out.println("\"33333\" = " + "33333");
+        }
+
+
+        MessageResponse<Object> mr=new MessageResponse<>();
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("signal", 12131d);
+        mr.setObject(hashMap);
+
+        Object obj = mr.getObject();
+        Map result = null;
+        if (obj instanceof Map) {
+            result = (Map)obj;
+            Double signal = (Double) result.get("signal");
+
+            int signalValue = signal.intValue();
+            mr.setObject(signalValue);
+            System.out.println("44444444");
+        }
+
 
     }
 }
